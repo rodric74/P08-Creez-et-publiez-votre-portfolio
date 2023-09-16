@@ -26,19 +26,25 @@ console.clear();
 const app = (() => {
 	let body;
 	let menu;
-	let menuItems;
+	let menuLinks;
 	
 	const init = () => {
 		body = document.querySelector('body');
 		menu = document.querySelector('.menu-icon');
-		menuItems = document.querySelectorAll('.nav__list-item');
+		menuLinks = document.querySelectorAll('.nav__list-item a, .nav__icon-item a');
 
 		applyListeners();
 	}
 	
 	const applyListeners = () => {
 		menu.addEventListener('click', () => toggleClass(body, 'nav-active'));
+		menuLinks.forEach(link => {
+			link.addEventListener('click', () => {
+				body.classList.remove('nav-active');
+			});
+		});
 	}
+
 	
 	const toggleClass = (element, stringClass) => {
 		if(element.classList.contains(stringClass))
