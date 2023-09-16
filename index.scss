@@ -10,7 +10,7 @@ $transition-length: 0.8s;
 
 @font-face {
     font-family: 'khorla';
-    src: url('./assets/font/Khorla.ttf') format('truetype');
+    src: url('./assets/fonts/Khorla.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -42,70 +42,6 @@ ul{
 .custom-font {
     font-family: 'khorla', sans-serif; 
 }
-
-// Header
-// .header {
-//     background-color: $primary-color;
-//     padding: 20px;
-//     position: sticky;
-//     top: 0;
-//     z-index: 1000;
-//     font-family: $font-family;
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-  
-//     &__logo {
-//       font-size: 24px;
-//       color: $secondary-color;
-//       text-decoration: none;
-  
-//       &:hover {
-//         color: lighten($secondary-color, 20%);
-//       }
-//     }
-  
-//     &__hamburger {
-//       position: relative;
-//       cursor: pointer;
-//       z-index: 1001;
-  
-//       &-line {
-//         width: 25px;
-//         height: 3px;
-//         background-color: $secondary-color;
-//         margin: 5px 0;
-//         transition: all 0.3s ease;
-//       }
-//     }
-  
-//     &__menu {
-//       position: fixed;
-//       top: 0;
-//       left: 0;
-//       width: 100%;
-//       height: 100vh;
-//       background-color: rgba(0, 0, 0, 0.9);
-//       display: flex;
-//       flex-direction: column;
-//       align-items: center;
-//       justify-content: center;
-//       transform: translateX(-100%);
-//       transition: transform 0.3s ease;
-  
-//       &-item {
-//         color: $secondary-color;
-//         text-decoration: none;
-//         margin: 15px 0;
-//         font-size: 16px;
-//         transition: color 0.3s;
-  
-//         &:hover {
-//           color: lighten($secondary-color, 20%);
-//         }
-//       }
-//     }
-//   }
 
 .menu-icon {
     $size: 30px;
@@ -382,6 +318,12 @@ ul{
   &__title{
     color: white;
     font-size: 4em;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  &__title.visible {
+    opacity: 1;
   }
 
   &__form {

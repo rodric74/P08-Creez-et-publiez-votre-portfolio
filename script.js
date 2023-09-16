@@ -21,7 +21,6 @@ window.onload = function() {
     
 };
 
-console.clear();
 
 const app = (() => {
 	let body;
@@ -55,5 +54,20 @@ const app = (() => {
 	
 	init();
 })();
+
+window.addEventListener('scroll', () => {
+    const contactSection = document.querySelector('#contact');
+    const contactTitle = document.querySelector('.contact__title');
+    const contactSectionOffset = contactSection.offsetTop;
+    const scrollPosition = window.scrollY + window.innerHeight;
+
+    if (scrollPosition > contactSectionOffset) {
+      contactTitle.classList.add('visible');
+    } else {
+      contactTitle.classList.remove('visible');
+    }
+});
+
+  
 
 
