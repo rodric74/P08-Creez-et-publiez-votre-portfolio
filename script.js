@@ -68,7 +68,7 @@ window.addEventListener('scroll', () => {
 	  let opacity = (scrollPosition - contactSectionOffset) / window.innerHeight;
 	  opacity = Math.min(opacity, 1);
   
-	  let blur = 10 - (10 * opacity);
+	  let blur = 5 - (10 * opacity);
   
 	  contactTitle.style.transform = `scale(${scale})`;
 	  contactTitle.style.opacity = opacity;
@@ -76,7 +76,7 @@ window.addEventListener('scroll', () => {
 	} else {
 	  contactTitle.style.transform = 'scale(3)';
 	  contactTitle.style.opacity = 0;
-	  contactTitle.style.filter = 'blur(10px)';
+	  contactTitle.style.filter = 'blur(5px)';
 	}
   });
   
