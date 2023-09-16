@@ -325,40 +325,42 @@ ul{
 
 // My Work
 .work {
+  padding: 20px;
+
+  &__project {
+    background-color: #fff;
     padding: 20px;
-  
-    &__project {
-      background-color: #fff;
-      padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+
+    &-thumbnail {
+      width: 50%;
       border-radius: 10px;
-      margin-bottom: 20px;
+      overflow: hidden;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      img {
+        width: 100%;
+      }
+    }
+
+    &-details {
+      width: 40%;
+      padding-left: 40px;
       display: flex;
-  
-      &-thumbnail {
-        width: 50%;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        img {
-          width: 100%;
-        }
-      }
-  
+      flex-direction: column;
+      gap: 10px;
+
       &-description {
-        margin-top: 10px;
         font-size: 1.5em;
-        width: 40%;
-        padding-left: 40px;
       }
-  
-      &-tech {
-        margin-top: 10px;
+
+      &-tech, &-link {
         font-size: 0.9em;
         color: #555;
       }
-  
+
       &-link {
-        margin-top: 10px;
         a {
           text-decoration: none;
           color: $primary-color;
@@ -369,6 +371,8 @@ ul{
       }
     }
   }
+}
+
   
 
 // Contact
@@ -458,13 +462,30 @@ ul{
   }
 }
 
-.footer__social-media-list-item {
+.footer__social-media-item {
   margin: 0;
 
   &-link {
       display: flex;
       align-items: center;
   }
+}
+
+.footer__social-media-link img {
+  transition: filter 0.6s; 
+}
+
+@keyframes removeBlur {
+  0%, 100% {
+    filter: brightness(0) invert(1) blur(0px);
+  }
+  10% {
+    filter: brightness(0) invert(1) blur(5px);
+  }
+}
+
+.footer__social-media-link img:hover {
+  animation: removeBlur 0.8s forwards;
 }
 
 
