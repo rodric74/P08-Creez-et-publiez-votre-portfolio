@@ -62,19 +62,24 @@ window.addEventListener('scroll', () => {
 	const scrollPosition = window.scrollY + window.innerHeight;
   
 	if (scrollPosition > contactSectionOffset) {
-	  contactTitle.classList.add('visible');
-	  
-	  
-	  let scale = 3 - (scrollPosition - contactSectionOffset) / window.innerHeight;
+	  let scale = 3 - (scrollPosition - contactSectionOffset) / (window.innerHeight / 3);
 	  scale = Math.max(scale, 1); 
   
-	  
+	  let opacity = (scrollPosition - contactSectionOffset) / window.innerHeight;
+	  opacity = Math.min(opacity, 1);
+  
+	  let blur = 10 - (10 * opacity);
+  
 	  contactTitle.style.transform = `scale(${scale})`;
+	  contactTitle.style.opacity = opacity;
+	  contactTitle.style.filter = `blur(${blur}px)`;
 	} else {
-	  contactTitle.classList.remove('visible');
-	  contactTitle.style.transform = 'scale(3)'; 
+	  contactTitle.style.transform = 'scale(3)';
+	  contactTitle.style.opacity = 0;
+	  contactTitle.style.filter = 'blur(10px)';
 	}
   });
+  
   
   
 
