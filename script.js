@@ -56,18 +56,26 @@ const app = (() => {
 })();
 
 window.addEventListener('scroll', () => {
-    const contactSection = document.querySelector('#contact');
-    const contactTitle = document.querySelector('.contact__title');
-    const contactSectionOffset = contactSection.offsetTop;
-    const scrollPosition = window.scrollY + window.innerHeight;
-
-    if (scrollPosition > contactSectionOffset) {
-      contactTitle.classList.add('visible');
-    } else {
-      contactTitle.classList.remove('visible');
-    }
-});
-
+	const contactSection = document.querySelector('#contact');
+	const contactTitle = document.querySelector('.contact__title');
+	const contactSectionOffset = contactSection.offsetTop;
+	const scrollPosition = window.scrollY + window.innerHeight;
+  
+	if (scrollPosition > contactSectionOffset) {
+	  contactTitle.classList.add('visible');
+	  
+	  
+	  let scale = 3 - (scrollPosition - contactSectionOffset) / window.innerHeight;
+	  scale = Math.max(scale, 1); 
+  
+	  
+	  contactTitle.style.transform = `scale(${scale})`;
+	} else {
+	  contactTitle.classList.remove('visible');
+	  contactTitle.style.transform = 'scale(3)'; 
+	}
+  });
+  
   
 
 
