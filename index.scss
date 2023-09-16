@@ -35,6 +35,10 @@ a, a:hover, a:visited{
 	color: $font-color-active;
 }
 
+ul{
+  list-style: none;
+}
+
 .custom-font {
     font-family: 'khorla', sans-serif; 
 }
@@ -204,6 +208,13 @@ a, a:hover, a:visited{
           }
         }
       }
+    }
+    &__icon{
+      display: flex;
+      
+    }
+    &__icon-item img{
+      width: 30px;
     }
   }
   
