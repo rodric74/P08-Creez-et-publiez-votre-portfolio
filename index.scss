@@ -2,6 +2,7 @@
 $primary-color: #3498db;
 $secondary-color: #353d48;
 $background-color: #1e2023;
+$background-section: rgb(242, 242, 253);
 $icon-color: #1e2023;
 $font-color: #ffffff;
 $font-color-active: #000000;
@@ -15,12 +16,12 @@ $transition-length: 0.8s;
     font-style: normal;
 }
 
-// Mixins
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+// // Mixins
+// @mixin flex-center {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// } 
 
 // Global Styles
 body {
@@ -252,9 +253,17 @@ ul{
 .about {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
     padding: 20px;
-    background-color: #f0f0f0;
+    background: rgb(30,32,35);
+background: linear-gradient(180deg, rgba(30,32,35,1) 0%, rgba(41,39,51,0.748358718487395) 35%, rgba(69,63,96,0) 100%);
+    &__container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color:$background-section;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
   
     &__photo {
       width: 20%;
@@ -288,7 +297,7 @@ ul{
   padding: 20px;
 
   &__project {
-    background-color: #fff;
+    background-color: $background-section;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
