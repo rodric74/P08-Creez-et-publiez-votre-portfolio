@@ -43,11 +43,19 @@ ul{
     font-family: 'khorla', sans-serif; 
 }
 
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 20px; 
+}
+
+
 .menu-icon {
     $size: 30px;
     height: $size;
     width: $size;
-    position: fixed;
+    position: relative;
     z-index: 2;
     left: 50px;
     top: 30px;
@@ -73,6 +81,8 @@ ul{
   }
   
   .nav {
+    max-width: 1366px; 
+    width: 100%;
     $width: 100vw;
     $height: 100vh;
     $font-size-calc: calc(2vw + 10px);
@@ -104,7 +114,8 @@ ul{
     &__content {
       position: fixed;
       top: 50%;
-      transform: translate(0%, -50%);
+      left: 50%;
+      transform: translate(-50%, -50%);
       width: 100%;
       text-align: center;
       font-size: $font-size-calc;
@@ -269,6 +280,7 @@ ul{
     border-radius: 10px;
     margin-bottom: 20px;
     display: flex;
+    justify-content: space-around;
 
     &-thumbnail {
       width: 50%;
