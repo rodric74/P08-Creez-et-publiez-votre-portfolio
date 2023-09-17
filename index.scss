@@ -55,8 +55,8 @@ ul{
     $size: 30px;
     height: $size;
     width: $size;
-    position: relative;
-    z-index: 2;
+    position: fixed;
+    z-index: 1000;
     left: 50px;
     top: 30px;
     cursor: pointer;
@@ -81,6 +81,7 @@ ul{
   }
   
   .nav {
+    top: 0;
     max-width: 1366px; 
     width: 100%;
     $width: 100vw;
@@ -94,6 +95,7 @@ ul{
     &:after {
       content: "";
       position: fixed;
+      max-width: 1366px;
       width: $width;
       height: $height;
       background: rgba(#eaeaea, 0.2);
@@ -103,6 +105,8 @@ ul{
     }
   
     &:after {
+      max-width: 1366px;
+      width: 100%;
       background: rgba(#ffffff, 1);
       transition-delay: 0s;
     }
