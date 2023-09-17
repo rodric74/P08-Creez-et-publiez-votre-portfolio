@@ -50,16 +50,26 @@ ul{
   padding: 0 20px; 
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  max-width: 1366px;
+  width: 100%;
+  height: 50px;
+  z-index: 1000;
+  // background-color: #1e20231e; 
+}
 
 .menu-icon {
     $size: 30px;
     height: $size;
     width: $size;
-    position: fixed;
+    position: relative;
     z-index: 1000;
     left: 50px;
-    top: 30px;
+    top: 20px;
     cursor: pointer;
+   
   
     &__line {
       height: 2px;
@@ -68,6 +78,8 @@ ul{
       background-color: $font-color;
       margin-bottom: 4px;
       transition: transform 0.2s ease, background-color 0.5s ease;
+      border: rgba(0, 0, 0, 0.393) solid 0.05em;
+      
     }
   
     &__line-left,
@@ -181,6 +193,7 @@ ul{
       &__line {
         background-color: #000;
         transform: translateX(0px) rotate(-45deg);
+        border: none;
       }
   
       &__line-left {
