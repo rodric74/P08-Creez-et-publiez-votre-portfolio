@@ -69,29 +69,21 @@ const app = (() => {
 	
 	
 
-	const toggleClass = (element, stringClass) => {
-		if (element.classList.contains(stringClass)) {
-		  element.classList.remove(stringClass);
-		  
-		  setTimeout(() => {
-			element.classList.add('nav-closing');
-		  }, 50);
-		  
-		  document.querySelector('.nav').addEventListener('transitionend', () => {
-			element.classList.remove('nav-closing');
-		  }, { once: true });
-		  
-		} else {
-		  element.classList.add(stringClass);
-		  element.classList.remove('nav-closing');
-		}
-	  };
-	  
-	  
-	  
+	const handleMouseLeave = (event) => {
+		const item = event.currentTarget;
+		item.style.removeProperty('--bar-width');
+	}
 	
-	  init();
-	})();
+	const toggleClass = (element, stringClass) => {
+	  if(element.classList.contains(stringClass))
+		element.classList.remove(stringClass);
+	  else
+		element.classList.add(stringClass);
+	}
+	
+	init();
+})();
+
 
 
 
@@ -119,6 +111,8 @@ document.querySelectorAll('.work__project-text').forEach((paragraph, index) => {
 	  readMoreSpan.style.display = 'none';
 	}
   });
+
+
   
   //Animation and form verification
   const formInputs = document.querySelectorAll('.contact__form input, .contact__form textarea');
@@ -167,5 +161,3 @@ document.querySelectorAll('.work__project-text').forEach((paragraph, index) => {
 
 
   
-
-
