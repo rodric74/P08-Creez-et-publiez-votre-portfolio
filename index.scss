@@ -271,7 +271,7 @@ strong{
    &__title{
     color: #BD871F;
     font-family: 'khorla';
-    font-size: 50px;
+    font-size: 60px;
    }
     
     &__hero{
@@ -344,6 +344,7 @@ strong{
       }
 
     &__thumbnail {
+      position: relative;
       width: 600px;
       height: 449px;
       border-radius: 10px;
@@ -352,6 +353,34 @@ strong{
       img {
         width: 100%;
       }
+
+      img {
+        width: 100%;
+        transition: filter 0.3s cubic-bezier(0.4, 0.0, 0.2, 1); // Ajustez les valeurs cubic-bezier selon vos préférences
+      }
+
+      &:hover {
+        img {
+          filter: blur(5px);
+        }
+        .hover-message {
+          display: flex; // Ajouté pour afficher le message au survol
+        }
+      }
+      .hover-message {
+        display: none; 
+        position: absolute; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.5); 
+        color: white; 
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 1.5em; 
+        text-align: center; 
+      }
+
     }
 
     &__details {
