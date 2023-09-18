@@ -17,7 +17,7 @@ body {
 
 a, a:hover, a:visited{
 	text-decoration: none;
-	color: $font-color-active;
+	color: #BD871F;
 }
 
 ul{
@@ -30,7 +30,7 @@ h2{
 
 .custom-font {
     font-family: 'khorla', sans-serif; 
-    color: #BD871F;
+    color: $font-custom;
     text-transform: uppercase;
 }
 
@@ -75,7 +75,7 @@ strong{
       height: 2px;
       width: $size;
       display: block;
-      background-color: $font-color;
+      background-color: #BD871F;
       margin-bottom: 4px;
       transition: transform 0.2s ease, background-color 0.5s ease;
     }
@@ -110,7 +110,7 @@ strong{
       max-width: 1366px;
       width: $width;
       height: $height;
-      background: rgba(#eaeaea, 0.2);
+      background: rgba(40, 54, 71, 0.2);
       z-index: -1;
       transition: transform $transition-easing $transition-length;
       transform: translateX(0%) translateY(-100%);
@@ -119,7 +119,7 @@ strong{
     &:after {
       max-width: 1366px;
       width: 100%;
-      background: rgba(#ffffff, 1);
+      background: rgba(40, 54, 71, 1);
       transition-delay: 0s;
     }
   
@@ -149,6 +149,7 @@ strong{
       &-item {
         position: relative;
         display: inline-block;
+        color: #BD871F;
         transition-delay: $transition-length;
         opacity: 0;
         transform: translate(0%, 100%);
@@ -158,7 +159,7 @@ strong{
         &:before {
           content: "";
           position: absolute;
-          background: $font-color-active;
+          background:#BD871F ;
           width: var(--bar-width, 20px);
           height: 1px;
           top: 100%;
@@ -191,7 +192,7 @@ strong{
   
     .menu-icon {
       &__line {
-        background-color: #000;
+        background-color: #BD871F;
         transform: translateX(0px) rotate(-45deg);
       }
   
@@ -255,11 +256,26 @@ strong{
 
 // About Me
 .about {
+    max-width: 1366px;
+    width: 100%;
     display: flex;
     align-items: center;
     padding: 20px;
+
+   &__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+
+   &__title{
+    color: #BD871F;
+    font-family: 'khorla';
+    font-size: 50px;
+   }
     
-    &__container{
+    &__hero{
+      width: 70%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -300,6 +316,16 @@ strong{
 .work {
   padding: 20px;
 
+  &__title{
+    color: #bd871f;
+    font-family: "khorla";
+    font-size: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+  }
+
   &__project {
     background: #1e1c1d;
     padding: 50px 20px;
@@ -308,7 +334,8 @@ strong{
     display: flex;
     justify-content: space-around;
     box-shadow: $box-shadow;
-   
+
+    
       
       &-text {
         font-size: calc(1vw + 10px);
