@@ -111,33 +111,26 @@ document.querySelectorAll('.work__project-text').forEach((paragraph, index) => {
 	}
   });
   
+  const formInputs = document.querySelectorAll('.contact__form input, .contact__form textarea');
+ 	const title = document.querySelector('.contact__title');
 
-// window.addEventListener('scroll', () => {
-// 	const contactSection = document.querySelector('#contact');
-// 	const contactTitle = document.querySelector('.contact__title');
-// 	const contactSectionOffset = contactSection.offsetTop;
-// 	const scrollPosition = window.scrollY + window.innerHeight;
+	formInputs.forEach(input => {
+	input.addEventListener('focus', () => {
+	  title.classList.add('blurred');
+	  
+	  setTimeout(() => {
+		title.classList.remove('blurred');
+	  }, 
+	  1000); 
+	});
   
-// 	if (scrollPosition > contactSectionOffset) {
-// 	  let scale = 3 - (scrollPosition - contactSectionOffset) / (window.innerHeight / 4);
-// 	  scale = Math.max(scale, 1); 
-  
-// 	  let opacity = (scrollPosition - contactSectionOffset) / window.innerHeight;
-// 	  opacity = Math.min(opacity, 1);
-  
-// 	  let blur = 1 - (1 * opacity);
-  
-// 	  contactTitle.style.transform = `scale(${scale})`;
-// 	  contactTitle.style.opacity = opacity;
-// 	  contactTitle.style.filter = `blur(${blur}px)`;
-// 	} else {
-// 	  contactTitle.style.transform = 'scale(3)';
-// 	  contactTitle.style.opacity = 0;
-// 	  contactTitle.style.filter = 'blur(10px)';
-// 	}
-//   });
-  
-  
+	input.addEventListener('blur', () => {
+	  title.classList.remove('blurred');
+	});
+  });
+
+
+
   
 
 

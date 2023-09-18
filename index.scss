@@ -399,6 +399,7 @@ strong{
 
 .contact {
   width: 100%;
+  margin-bottom: 20px;
 
   &__container{
     margin: 0;
@@ -406,23 +407,20 @@ strong{
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-
   }
+
   &__title{
     margin: 0;
-    color: white;
-    width: 300Px;
+    color: $font-custom;
+    width: 400px; 
     font-size: 4em;
-    // opacity: 0;
     transition: opacity 2s ease-in-out, transform 0.5s ease-in-out;
-    // transform: scale(3); 
-    // filter: blur(20px);
-  }
 
-  // &__title.visible {
-  //   opacity: 1;
-  //   transform: scale(1);
-  // }
+    &.blurred {
+      filter: blur(5px);
+      transition: filter 1s ease-in-out;
+    }
+  }
 
   &__form {
     margin: 0;
@@ -450,21 +448,30 @@ strong{
       margin-bottom: 20px;
       border: 1px solid #ccc;
       border-radius: 5px;
+      background-color: rgba(40, 54, 71, 0.598); 
+      color: #BD871F; 
+      transition: background-color 0.3s ease; 
+
+      &:focus {
+        background-color: rgb(250, 250, 250); 
+      }
     }
 
     button {
       padding: 10px 20px;
       border: none;
       border-radius: 5px;
-      background-color: $primary-color;
+      background-color: $font-custom;
       color: $font-color;
       cursor: pointer;
+
       &:hover {
-        background-color: darken($primary-color, 10%);
+        background-color: darken($font-custom, 10%);
       }
     }
   }
 }
+
 
 
 // Footer
@@ -472,7 +479,8 @@ strong{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: $primary-color;
+  background: linear-gradient(to bottom, rgba(40, 54, 71, 0.598)25%, rgba(40, 54, 71, 0.3), transparent);
+  border-radius: 10px;
   padding: 20px;
   font-family: $font--primary;
   color: $font-color;
