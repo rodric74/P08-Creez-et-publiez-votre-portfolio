@@ -30,7 +30,7 @@ h2{
 
 .custom-font {
     font-family: 'khorla', sans-serif; 
-    color: #ffffff;
+    color: #BD871F;
     text-transform: uppercase;
 }
 
@@ -159,7 +159,7 @@ strong{
           content: "";
           position: absolute;
           background: $font-color-active;
-          width: 20px;
+          width: var(--bar-width, 20px);
           height: 1px;
           top: 100%;
           transform: translate(0%, 0%);
@@ -369,31 +369,52 @@ strong{
 }
 
 // Contact
+
 .contact {
-  padding: 20px;
+  width: 100%;
 
+  &__container{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+
+  }
   &__title{
+    margin: 0;
     color: white;
+    width: 300Px;
     font-size: 4em;
-    opacity: 0;
+    // opacity: 0;
     transition: opacity 2s ease-in-out, transform 0.5s ease-in-out;
-    transform: scale(3); 
-    filter: blur(20px);
+    // transform: scale(3); 
+    // filter: blur(20px);
   }
 
-  &__title.visible {
-    opacity: 1;
-    transform: scale(1);
-  }
+  // &__title.visible {
+  //   opacity: 1;
+  //   transform: scale(1);
+  // }
 
   &__form {
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    &-group{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; 
+      width: 100%;
+      max-width: 325px; 
+    }
+
     label{
       color: $font-color;
       font-size: 20px;
+      margin-bottom: 5px;
     }
 
     input, textarea {
@@ -418,20 +439,6 @@ strong{
   }
 }
 
-.contact__form-group {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; 
-  width: 100%;
-  max-width: 325px; 
-  margin: 0 auto;
-
-  .contact__form-label {
-    // align-self: flex-start;
-    margin-bottom: 5px;
-  }
-
-}
 
 // Footer
 .footer {
@@ -492,23 +499,3 @@ strong{
 }
 
 
-// Responsive Design
-@media(min-width: 768px) {
-  .header, .footer {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .header__nav-list {
-    justify-content: flex-end;
-  }
-
-  .about__photo, .about__description {
-    text-align: left;
-  }
-
-  .contact__form {
-    width: 50%;
-    margin: 0 auto;
-  }
-}

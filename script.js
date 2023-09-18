@@ -21,7 +21,6 @@ window.onload = function() {
     
 };
 
-
 const app = (() => {
 	let body;
 	let menu;
@@ -51,12 +50,16 @@ const app = (() => {
 	}
 	
 	const handleMouseEnter = (event) => {
-	  const item = event.currentTarget;
-	  const itemWidth = item.offsetWidth;
-	  const maxWidth = 790; 
-	  const barWidth = Math.min(itemWidth, maxWidth);
-	  
-	  item.style.setProperty('--bar-width', `${barWidth}px`);
+		const item = event.currentTarget;
+		const navContent = document.querySelector('.nav__content');
+		const itemWidth = item.offsetWidth;
+		const itemLeftOffset = item.offsetLeft;
+		const navContentWidth = navContent.offsetWidth;
+	
+		const maxWidth = navContentWidth - itemLeftOffset - itemWidth; 
+		const barWidth = Math.min(itemWidth, maxWidth);
+		
+		item.style.setProperty('--bar-width', `${barWidth}px`);
 	}
 	
 	const toggleClass = (element, stringClass) => {
@@ -93,30 +96,30 @@ document.querySelectorAll('.work__project-text').forEach((paragraph, index) => {
   });
   
 
-window.addEventListener('scroll', () => {
-	const contactSection = document.querySelector('#contact');
-	const contactTitle = document.querySelector('.contact__title');
-	const contactSectionOffset = contactSection.offsetTop;
-	const scrollPosition = window.scrollY + window.innerHeight;
+// window.addEventListener('scroll', () => {
+// 	const contactSection = document.querySelector('#contact');
+// 	const contactTitle = document.querySelector('.contact__title');
+// 	const contactSectionOffset = contactSection.offsetTop;
+// 	const scrollPosition = window.scrollY + window.innerHeight;
   
-	if (scrollPosition > contactSectionOffset) {
-	  let scale = 3 - (scrollPosition - contactSectionOffset) / (window.innerHeight / 3);
-	  scale = Math.max(scale, 1); 
+// 	if (scrollPosition > contactSectionOffset) {
+// 	  let scale = 3 - (scrollPosition - contactSectionOffset) / (window.innerHeight / 4);
+// 	  scale = Math.max(scale, 1); 
   
-	  let opacity = (scrollPosition - contactSectionOffset) / window.innerHeight;
-	  opacity = Math.min(opacity, 1);
+// 	  let opacity = (scrollPosition - contactSectionOffset) / window.innerHeight;
+// 	  opacity = Math.min(opacity, 1);
   
-	  let blur = 10 - (10 * opacity);
+// 	  let blur = 1 - (1 * opacity);
   
-	  contactTitle.style.transform = `scale(${scale})`;
-	  contactTitle.style.opacity = opacity;
-	  contactTitle.style.filter = `blur(${blur}px)`;
-	} else {
-	  contactTitle.style.transform = 'scale(3)';
-	  contactTitle.style.opacity = 0;
-	  contactTitle.style.filter = 'blur(10px)';
-	}
-  });
+// 	  contactTitle.style.transform = `scale(${scale})`;
+// 	  contactTitle.style.opacity = opacity;
+// 	  contactTitle.style.filter = `blur(${blur}px)`;
+// 	} else {
+// 	  contactTitle.style.transform = 'scale(3)';
+// 	  contactTitle.style.opacity = 0;
+// 	  contactTitle.style.filter = 'blur(10px)';
+// 	}
+//   });
   
   
   
