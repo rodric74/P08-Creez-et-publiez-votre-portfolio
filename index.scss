@@ -256,8 +256,8 @@ strong{
 
 // About Me
 .about {
-    max-width: 1366px;
-    width: 100%;
+    // max-width: 1366px;
+    // width: 100%;
     display: flex;
     align-items: center;
     padding: 20px;
@@ -275,7 +275,7 @@ strong{
    }
     
     &__hero{
-      width: 70%;
+      width: 60%;
       display: flex;
       justify-content: center;
       align-items: center;
