@@ -61,7 +61,7 @@ strong{
 
 // Menu and Navigation 
 
-.menu-icon {
+  .menu-icon {
     $size: 30px;
     height: $size;
     width: $size;
@@ -169,7 +169,7 @@ strong{
   
         &:hover {
           &:before {
-            width: 100%;
+            width: var(--bar-width, 20px)
           }
         }
       }
