@@ -1,14 +1,5 @@
 
-$primary-color: #1e1c1d;
-$secondary-color: #1e1c1d;
-$background-color: #1e2023;
-$background-section:#1e1c1d;
-$icon-color: #1e2023;
-$font-color: #ffffff;
-$font-color-active: #000000;
-$font--primary:'Dosis', sans-serif;
-$transition-length: 0.8s;
-$box-shadow: 0px 0px 11px 11px #252324b5;
+@import "variables"; 
 
 @font-face {
     font-family: 'khorla';
@@ -17,14 +8,6 @@ $box-shadow: 0px 0px 11px 11px #252324b5;
     font-style: normal;
 }
 
-// // Mixins
-// @mixin flex-center {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// } 
-
-// Global Styles
 body {
     background-color: $background-color;
     font-family: $font--primary;
@@ -75,6 +58,8 @@ strong{
   z-index: 1000;
   background-color: rgba(30, 32, 35, 0.143); 
 }
+
+// Menu and Navigation 
 
 .menu-icon {
     $size: 30px;
@@ -327,7 +312,7 @@ strong{
       
       &-text {
         font-size: calc(1vw + 10px);
-        color: rgb(255, 255, 255);
+        color: $font-color;
         line-height: 1.5em;
       }
 
@@ -355,13 +340,13 @@ strong{
 
       &-tech, &-link {
         font-size: 0.9em;
-        color: #ffffff;
+        color: $font-color;
       }
 
       &-link {
         a {
           text-decoration: none;
-          color: $primary-color;
+          color: $font-color;
           &:hover {
             text-decoration: underline;
           }
@@ -407,7 +392,7 @@ strong{
     align-items: center;
 
     label{
-      color: white;
+      color: $font-color;
       font-size: 20px;
     }
 
@@ -424,7 +409,7 @@ strong{
       border: none;
       border-radius: 5px;
       background-color: $primary-color;
-      color: #fff;
+      color: $font-color;
       cursor: pointer;
       &:hover {
         background-color: darken($primary-color, 10%);
@@ -453,10 +438,10 @@ strong{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: $secondary-color;
+  background-color: $primary-color;
   padding: 20px;
   font-family: $font--primary;
-  color: #ffffff;
+  color: $font-color;
 }
 
 .footer__title {
