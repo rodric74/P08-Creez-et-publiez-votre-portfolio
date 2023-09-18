@@ -111,23 +111,49 @@ document.querySelectorAll('.work__project-text').forEach((paragraph, index) => {
 	}
   });
   
+  //Animation and form verification
   const formInputs = document.querySelectorAll('.contact__form input, .contact__form textarea');
  	const title = document.querySelector('.contact__title');
 
-	formInputs.forEach(input => {
-	input.addEventListener('focus', () => {
-	  title.classList.add('blurred');
+	 formInputs.forEach(input => {
+		const label = input.previousElementSibling;
 	  
-	  setTimeout(() => {
-		title.classList.remove('blurred');
-	  }, 
-	  1000); 
-	});
-  
-	input.addEventListener('blur', () => {
-	  title.classList.remove('blurred');
-	});
-  });
+		input.addEventListener('focus', () => {
+		  title.classList.add('blurred');
+	  
+		  if (label) {
+			label.style.fontWeight = 'bold';
+		  }
+	  
+		  setTimeout(() => {
+			title.classList.remove('blurred');
+		  }, 1000);
+		});
+	  
+		input.addEventListener('blur', () => {
+		  title.classList.remove('blurred');
+	  
+		  if (label) {
+			label.style.fontWeight = 'normal';
+		  }
+		});
+	  });
+
+	  	const emailInput = document.querySelector('#email');
+		const emailError = document.createElement('div');
+		emailError.style.color = 'red';
+		emailError.textContent = 'Veuillez entrer une adresse email valide';
+		emailError.style.display = 'none';
+		emailInput.insertAdjacentElement('afterend', emailError);
+
+		emailInput.addEventListener('blur', () => {
+		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		if (!emailRegex.test(emailInput.value)) {
+			emailError.style.display = 'block';
+		} else {
+			emailError.style.display = 'none';
+		}
+		});	
 
 
 
