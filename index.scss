@@ -1,13 +1,14 @@
 
-$primary-color: #3498db;
-$secondary-color: #353d48;
+$primary-color: #1e1c1d;
+$secondary-color: #1e1c1d;
 $background-color: #1e2023;
-$background-section:#B39AAE;
+$background-section:#1e1c1d;
 $icon-color: #1e2023;
 $font-color: #ffffff;
 $font-color-active: #000000;
 $font--primary:'Dosis', sans-serif;
 $transition-length: 0.8s;
+$box-shadow: 0px 0px 11px 11px #252324b5;
 
 @font-face {
     font-family: 'khorla';
@@ -47,6 +48,7 @@ h2{
 .custom-font {
     font-family: 'khorla', sans-serif; 
     color: #ffffff;
+    text-transform: uppercase;
 }
 
 strong{
@@ -277,10 +279,9 @@ strong{
       justify-content: center;
       align-items: center;
       color: #ffffff;
-      background: rgb(30,32,35);
-      background: linear-gradient(180deg, rgba(30,32,35,1) 27%, rgba(179,154,174,1) 100%);
+      background: #1e1c1d;
       border-radius: 10px;
-      box-shadow: inset 0px 11px 17px 6px rgba(133,133,133,.56)
+      box-shadow:  $box-shadow;
     }
   
     &__photo {
@@ -315,14 +316,13 @@ strong{
   padding: 20px;
 
   &__project {
-    background: rgb(30,32,35);
-    background: linear-gradient(180deg, rgba(30,32,35,1) 27%, rgba(179,154,174,1) 100%);
+    background: #1e1c1d;
     padding: 50px 20px;
     border-radius: 10px;
     margin-bottom: 50px;
     display: flex;
     justify-content: space-around;
-    box-shadow: inset 0px 11px 17px 6px rgba(133,133,133,.56);
+    box-shadow: $box-shadow;
    
       
       &-text {
@@ -455,7 +455,8 @@ strong{
   align-items: center;
   background-color: $secondary-color;
   padding: 20px;
-  color: #fff;
+  font-family: $font--primary;
+  color: #ffffff;
 }
 
 .footer__title {
