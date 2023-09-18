@@ -2,7 +2,7 @@
 $primary-color: #3498db;
 $secondary-color: #353d48;
 $background-color: #1e2023;
-$background-section: rgb(242, 242, 253);
+$background-section:#B39AAE;
 $icon-color: #1e2023;
 $font-color: #ffffff;
 $font-color-active: #000000;
@@ -40,21 +40,27 @@ ul{
   list-style: none;
 }
 
+h2{
+  color: white;
+}
+
 .custom-font {
     font-family: 'khorla', sans-serif; 
+    color: #ffffff;
 }
 
 strong{
-  color: #3498db;
-  font-size: 20px;
+  color: #ffffff;
+  font-size: 25px;
   font-family: 'khorla';
+  text-transform: uppercase;
 }
 
 .container {
   max-width: 1366px;
   margin: 0 auto;
   position: relative;
-  // padding: 0 20px; 
+  padding: 0 20px; 
   scroll-behavior: smooth;
 }
 
@@ -265,15 +271,16 @@ strong{
     display: flex;
     align-items: center;
     padding: 20px;
-    background: rgb(30,32,35);
-background: linear-gradient(180deg, rgba(30,32,35,1) 0%, rgba(41,39,51,0.748358718487395) 35%, rgba(69,63,96,0) 100%);
+    
     &__container{
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color:$background-section;
+      color: #ffffff;
+      background: rgb(30,32,35);
+      background: linear-gradient(180deg, rgba(30,32,35,1) 27%, rgba(179,154,174,1) 100%);
       border-radius: 10px;
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      box-shadow: inset 0px 11px 17px 6px rgba(133,133,133,.56)
     }
   
     &__photo {
@@ -283,7 +290,7 @@ background: linear-gradient(180deg, rgba(30,32,35,1) 0%, rgba(41,39,51,0.7483587
       &-img {
         width: 100%;
         border-radius: 50%;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        box-shadow: rgba(0, 0, 0, 0.508) 0px 3px 8px;
       }
     }
   
@@ -308,21 +315,25 @@ background: linear-gradient(180deg, rgba(30,32,35,1) 0%, rgba(41,39,51,0.7483587
   padding: 20px;
 
   &__project {
-    background-color: $background-section;
-    padding: 20px;
+    background: rgb(30,32,35);
+    background: linear-gradient(180deg, rgba(30,32,35,1) 27%, rgba(179,154,174,1) 100%);
+    padding: 50px 20px;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     display: flex;
     justify-content: space-around;
+    box-shadow: inset 0px 11px 17px 6px rgba(133,133,133,.56);
+   
       
       &-text {
         font-size: calc(1vw + 10px);
-        color: rgb(0, 0, 0);
-        line-height: 2em;
+        color: rgb(255, 255, 255);
+        line-height: 1.5em;
       }
 
     &-thumbnail {
-      width: 50%;
+      width: 600px;
+      height: 449px;
       border-radius: 10px;
       overflow: hidden;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -344,7 +355,7 @@ background: linear-gradient(180deg, rgba(30,32,35,1) 0%, rgba(41,39,51,0.7483587
 
       &-tech, &-link {
         font-size: 0.9em;
-        color: #555;
+        color: #ffffff;
       }
 
       &-link {
@@ -357,6 +368,18 @@ background: linear-gradient(180deg, rgba(30,32,35,1) 0%, rgba(41,39,51,0.7483587
         }
       }
     }
+  }
+}
+
+.read-more {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "khorla";
+  font-size: 20px;
+
+  &:hover {
+    text-decoration: none;
   }
 }
 

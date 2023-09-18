@@ -55,6 +55,30 @@ const app = (() => {
 	init();
 })();
 
+document.querySelectorAll('.work__project-text').forEach((paragraph, index) => {
+	const words = paragraph.textContent.split(' ');
+	const readMoreSpan = document.querySelectorAll('.read-more')[index];
+  
+	if (words.length > 25) {
+	  const shortText = words.slice(0,25).join(' ') + '...';
+	  paragraph.setAttribute('data-fulltext', paragraph.textContent);
+	  paragraph.textContent = shortText;
+  
+	  readMoreSpan.addEventListener('click', () => {
+		if (paragraph.textContent === shortText) {
+		  paragraph.textContent = paragraph.getAttribute('data-fulltext');
+		  readMoreSpan.textContent = 'Show less...';
+		} else {
+		  paragraph.textContent = shortText;
+		  readMoreSpan.textContent = 'Show more...';
+		}
+	  });
+	} else {
+	  readMoreSpan.style.display = 'none';
+	}
+  });
+  
+
 window.addEventListener('scroll', () => {
 	const contactSection = document.querySelector('#contact');
 	const contactTitle = document.querySelector('.contact__title');
