@@ -235,6 +235,20 @@ strong{
       }
     }
   }
+
+  body.nav-closing .nav__list-item {
+    opacity: 0;
+    transform: translate(0%, 100%);
+    transition: opacity 0.5s ease, transform 0.5s ease, color 0.3s ease;
+  
+    @for $i from 1 through $menu-items-count { 
+      &:nth-child(#{$i}) {
+        transition-delay: $transition-length * (1 - $i / $menu-items-count) + 0.5s;
+      }
+    }
+  }
+  
+  
   
 
 // titre
