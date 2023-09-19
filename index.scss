@@ -767,8 +767,13 @@ background-color: rgba(30, 32, 35, 0.143);
   .about__description{
     width: 90%;
   }
-.contact__form-group{
-  width: 90%;
+  .contact__form input{
+    width: 18rem;
+  }
+  .contact__form textarea {
+    width: 18rem;
+  }
+  
 }
   .footer{
     padding: 5px;
@@ -779,14 +784,14 @@ background-color: rgba(30, 32, 35, 0.143);
   }
 
   .footer__social-media-link{
-    width: 50%;
+    width: 90%;
   }
 
   .footer__social-media-link img{
     width: 50px;
   }
 
-}
+
 
 
 
