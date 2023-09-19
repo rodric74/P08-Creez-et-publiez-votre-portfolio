@@ -701,10 +701,10 @@ background-color: rgba(30, 32, 35, 0.143);
     letter-spacing: -0.285rem; //pourquoi ça change pas? 
 
   }
-  .work__title h2{
+  .work__title__text{
     display: block;
     text-align: right;
-    font-size: 2.5rem;
+    font-size: 5.2rem;
     letter-spacing: -0.285rem;
 
     &__logo{
@@ -716,43 +716,22 @@ background-color: rgba(30, 32, 35, 0.143);
   .work__project {
     flex-direction: column;
     align-items: left;
-    padding: 1rem;
+    padding: 1rem; 
+  }
 
-    &__description {
-      width: 100%;
+  .work__project__thumbnail{
+    width: 100%;
 
-      &-title {
-        width: 90%;
-        font-size: 1.9rem;
-        text-align: left;
-      }
+  }
 
-    &__thumbnail {
-      order: 1; 
-      width: 20rem; 
-      height: auto;
-      
-      img {
-        width: 100%;
-      }
-    }
+  .work__project__details{
+    width: 100%;
+    padding-left: 0;
+    margin: 1rem 0;
+  }
 
-    &__details {
-      order: 2; 
-      width: 100%; 
-      padding-left: 0;
-
-      
-
-        & p {
-          font-size: 1.2rem;
-        }
-      }
-
-      &__icon-container {
-        width: 50%;
-      }
-    }
+  .work__project__description{
+    width: 100%;
   }
 
   .contact__container{
