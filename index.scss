@@ -653,6 +653,15 @@ background-color: rgba(30, 32, 35, 0.143);
 
 }
 @media (max-width: 768px){
+
+  .work__title h2.custom-font {
+    font-size: 4rem;
+    
+  }
+
+  .work__project{
+    flex-direction: column;
+  }
   
 }
 
