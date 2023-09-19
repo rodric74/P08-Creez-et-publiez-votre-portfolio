@@ -301,7 +301,7 @@ background-color: rgba(30, 32, 35, 0.143);
   &__title {
     color: #BD871F;
     font-family: 'khorla';
-    font-size: 3.75rem; 
+    font-size: 4.75rem; 
   }
 
   &__hero {
@@ -343,13 +343,27 @@ background-color: rgba(30, 32, 35, 0.143);
 // My Work
 .work {
   padding: 1.25rem; 
-  &__title {
-    color: #BD871F;
-    font-family: "khorla";
-    font-size: 3.125rem; 
+
+  &__title{
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+
+    &__text {
+      color: #BD871F;
+      font-family: "khorla";
+      font-size: 4.125rem; 
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__logo{
+      display: flex;
+      width: 50%;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 
   &__project {
@@ -358,10 +372,29 @@ background-color: rgba(30, 32, 35, 0.143);
     border-radius: 0.625rem;
     margin-bottom: 3.125rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     box-shadow: $box-shadow;
 
-    
+    &__description{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    &__description-title{
+      color: $font-custom;
+      font-family: 'khorla';
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    &__icon-container {
+      display: flex;
+      gap: 1rem;
+      order: 2;
+    }
       
       &-text {
         font-size: calc(1vw + 10px);
@@ -409,8 +442,9 @@ background-color: rgba(30, 32, 35, 0.143);
 
     }
 
+   
     &__details {
-      width: 40%;
+      width: 45%;
       padding-left: 2.5rem;
       display: flex;
       flex-direction: column;
@@ -624,6 +658,14 @@ background-color: rgba(30, 32, 35, 0.143);
   .work__title {
     flex-direction: column;
     align-items: center;
+    text-shadow: 5px 5px 5px #283647;
+    letter-spacing: 0.5rem;
+  }
+
+  .work__title__text{
+    font-size: 4.9rem;
+    letter-spacing: 1.125rem;
+    margin: 0;
   }
 
   .work__title__logo {
@@ -633,16 +675,17 @@ background-color: rgba(30, 32, 35, 0.143);
     justify-content: space-between;
   }
 
-  .work__title h2.custom-font {
+  .work__project__description-title {
     width: 100%;
-    font-size: 5.6rem;
-    text-align: center;
-    letter-spacing: 0.5rem;
-    text-shadow: 5px 5px 5px #283647;
+    font-size: 1.5rem;
+    text-align: left;
+   
+    
   }
 
   .work__project__thumbnail{
-    width: 27rem;
+    width: 31rem;
+    height: fit-content;
 
     img {
       object-fit: cover;
@@ -652,20 +695,78 @@ background-color: rgba(30, 32, 35, 0.143);
 
 
 }
-@media (max-width: 768px){
+@media (max-width: 768px) {
+  
+  .about__title{
+    letter-spacing: -0.285rem; //pourquoi ça change pas? 
 
-  .work__title h2.custom-font {
-    font-size: 4rem;
-    
+  }
+  .work__title h2{
+    display: block;
+    text-align: right;
+    font-size: 2.5rem;
+    letter-spacing: -0.285rem;
+
+    &__logo{
+      justify-content: start;
+      
+    }
+   
+  }
+  .work__project {
+    flex-direction: column;
+    align-items: left;
+    padding: 1rem;
+
+    &__description {
+      width: 100%;
+
+      &-title {
+        width: 90%;
+        font-size: 1.9rem;
+        text-align: left;
+      }
+
+    &__thumbnail {
+      order: 1; 
+      width: 20rem; 
+      height: auto;
+      
+      img {
+        width: 100%;
+      }
+    }
+
+    &__details {
+      order: 2; 
+      width: 100%; 
+      padding-left: 0;
+
+      
+
+        & p {
+          font-size: 1.2rem;
+        }
+      }
+
+      &__icon-container {
+        width: 50%;
+      }
+    }
   }
 
-  .work__project{
+  .contact__container{
+    display: flex;
     flex-direction: column;
   }
-  
+
+  .contact__title{
+    text-align: center;
+    margin-bottom: 10px;
+  }
 }
 
-@media (max-width: 425px){
-  
 
-}
+
+
+
