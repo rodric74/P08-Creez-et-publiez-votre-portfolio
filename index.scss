@@ -747,11 +747,44 @@ background-color: rgba(30, 32, 35, 0.143);
 
 @media (max-width:425px){
 
+.container{
+  padding: 0;
+}
+
   .site-title__headline{
     font-size: calc(3vw + 0.5rem);
   }
 
-  
+  .about__title{
+    font-size: 3rem;
+    top: -6rem;
+  }
+
+  .about__hero{
+    flex-direction: column;
+  }
+
+  .about__description{
+    width: 90%;
+  }
+.contact__form-group{
+  width: 90%;
+}
+  .footer{
+    padding: 5px;
+  }
+
+  .footer__social-media{
+    width: 90%;
+  }
+
+  .footer__social-media-link{
+    width: 50%;
+  }
+
+  .footer__social-media-link img{
+    width: 50px;
+  }
 
 }
 
