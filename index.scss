@@ -711,20 +711,19 @@ background-color: rgba(30, 32, 35, 0.143);
   .work__title__text{
     display: block;
     text-align: right;
-    font-size: 5rem;
+    font-size: 5.2rem;
     letter-spacing: -0.285rem;
-    width: 90%;
 
-  }
-
-  .work__title__logo{
-    width: 90%;
+    &__logo{
+      justify-content: start;
+      
+    }
+   
   }
   .work__project {
     flex-direction: column;
     align-items: left;
     padding: 1rem; 
-    width: 90%;
   }
 
   .work__project__thumbnail{
@@ -787,21 +786,21 @@ background-color: rgba(30, 32, 35, 0.143);
   }
   
 }
-.footer {
-  padding: 5px;
+  .footer{
+    padding: 5px;
+  }
 
-  &__social-media {
+  .footer__social-media{
     width: 90%;
   }
 
-  &__social-media-link {
+  .footer__social-media-link{
     width: 90%;
-    
-    img {
-      width: 50px;
-    }
   }
-}
+
+  .footer__social-media-link img{
+    width: 50px;
+  }
 
 
 
