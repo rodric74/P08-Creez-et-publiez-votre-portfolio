@@ -580,13 +580,15 @@ background-color: rgba(30, 32, 35, 0.143);
   padding: 1.25rem; 
   font-family: $font--primary;
   color: $font-color;
+
+  .footer__title {
+    font-size: 1.5rem; 
+    margin-bottom: 1.25rem;
+    text-align: center;
+  }
 }
 
-.footer__title {
-  font-size: 1.5rem; 
-  margin-bottom: 1.25rem;
-  text-align: center;
-}
+
 
 .footer__social-media {
   display: flex;
