@@ -8,6 +8,10 @@
     font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: $background-color;
   font-family: $font--primary;
@@ -507,6 +511,7 @@ background-color: rgba(30, 32, 35, 0.143);
 
   &__title{
     margin: 0;
+    font-family: 'khorla';
     color: $font-custom;
     width: 25rem; 
     font-size: 4em;
