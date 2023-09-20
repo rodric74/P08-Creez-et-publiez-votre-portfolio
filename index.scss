@@ -59,6 +59,13 @@ z-index: 1000;
 background-color: rgba(30, 32, 35, 0.143); 
 }
 
+.github-gold a{
+  display: flex;
+  align-items: center;
+  color: $font-custom;
+  font-family: 'khorla';
+}
+
 .menu-icon {
   height: $size;
   width: $size;
