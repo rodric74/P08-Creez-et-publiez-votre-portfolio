@@ -10,6 +10,7 @@ window.onload = function() {
         event.preventDefault();
         // Generate a five-digit number for the contact_number variable
         this.contact_number.value = Math.random() * 100000 | 0;
+
         // Send the form using EmailJS
         emailjs.sendForm('service_spf4zxs', 'template_fs1fdnq', this)
             .then(function() {
@@ -20,8 +21,8 @@ window.onload = function() {
                 alert('Oops... ' + JSON.stringify(error));
             });
     });
-    
 };
+
 
 //MENU 
 
