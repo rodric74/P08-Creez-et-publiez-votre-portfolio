@@ -1,5 +1,6 @@
 
 @import "variables"; 
+@import "responsive";
 
 @font-face {
     font-family: 'khorla';
@@ -772,6 +773,10 @@ background-color: rgba(30, 32, 35, 0.143);
   .about__title{
     font-size: 3rem;
     top: -6rem;
+  }
+
+  .about__photo{
+    width: 50%;
   }
 
   .about__hero{
