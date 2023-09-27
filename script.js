@@ -1,27 +1,4 @@
-// EMAIL JS
 
-(function() {
-    // Initialize EmailJS
-    emailjs.init('NiRKY6SfZxvr8ysRx'); 
-})();
-
-window.onload = function() {
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        // Generate a five-digit number for the contact_number variable
-        this.contact_number.value = Math.random() * 100000 | 0;
-
-        // Send the form using EmailJS
-        emailjs.sendForm('service_spf4zxs', 'template_fs1fdnq', this)
-            .then(function() {
-                console.log('SUCCESS!');
-                alert('Message sent!');
-            }, function(error) {
-                console.log('FAILED...', error);
-                alert('Oops... ' + JSON.stringify(error));
-            });
-    });
-};
 
 
 //MENU 
@@ -113,6 +90,31 @@ document.querySelectorAll('.work__project-text').forEach((paragraph, index) => {
 	}
   });
 
+  // EMAIL JS
+
+(function() {
+    // Initialize EmailJS
+    emailjs.init('NiRKY6SfZxvr8ysRx'); 
+})();
+
+window.onload = function() {
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Generate a five-digit number for the contact_number variable
+        this.contact_number.value = Math.random() * 100000 | 0;
+
+        // Send the form using EmailJS
+        emailjs.sendForm('service_spf4zxs', 'template_fs1fdnq', this)
+            .then(function() {
+                console.log('SUCCESS!');
+                alert('Message sent!');
+            }, function(error) {
+                console.log('FAILED...', error);
+                alert('Oops... ' + JSON.stringify(error));
+            });
+    });
+};
+
 
   
   //Animation and form verification
@@ -143,21 +145,21 @@ document.querySelectorAll('.work__project-text').forEach((paragraph, index) => {
 		});
 	  });
 
-	  	const emailInput = document.querySelector('#email');
-		const emailError = document.createElement('div');
-		emailError.style.color = 'red';
-		emailError.textContent = 'Veuillez entrer une adresse email valide';
-		emailError.style.display = 'none';
-		emailInput.insertAdjacentElement('afterend', emailError);
+	  	// const emailInput = document.querySelector('#user_email');
+		// const emailError = document.createElement('div');
+		// emailError.style.color = 'red';
+		// emailError.textContent = 'Veuillez entrer une adresse email valide';
+		// emailError.style.display = 'none';
+		// emailInput.insertAdjacentElement('afterend', emailError);
 
-		emailInput.addEventListener('blur', () => {
-		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-		if (!emailRegex.test(emailInput.value)) {
-			emailError.style.display = 'block';
-		} else {
-			emailError.style.display = 'none';
-		}
-		});	
+		// emailInput.addEventListener('blur', () => {
+		// const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		// if (!emailRegex.test(emailInput.value)) {
+		// 	emailError.style.display = 'block';
+		// } else {
+		// 	emailError.style.display = 'none';
+		// }
+		// });	
 
 
 

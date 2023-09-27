@@ -112,6 +112,8 @@ background-color: rgba(30, 32, 35, 0.143);
   $transition-easing: cubic-bezier(0.77, 0, 0.175, 1);
   position: fixed;
   z-index: 1;
+  transition: visibility 0.3s ease-out, opacity 0.3s ease-out; 
+  opacity: 0;
 
   &:before,
   &:after {
@@ -221,6 +223,10 @@ background-color: rgba(30, 32, 35, 0.143);
       display: block;
       visibility: visible;
       pointer-events: auto;
+      visibility: visible;
+      pointer-events: auto;
+      opacity: 1;
+      
   
       &:before,
       &:after {
@@ -285,7 +291,6 @@ background-color: rgba(30, 32, 35, 0.143);
       opacity: 0;
       animation: appear 2s forwards;
 
-      // The translate values remain the same
       &:nth-child(1) { animation-delay: 0s; transform: translate(-6.25rem, -6.25rem); } 
       &:nth-child(2) { animation-delay: 0.3s; transform: translate(6.25rem, -3.125rem); } 
       &:nth-child(3) { animation-delay: 0.6s; transform: translate(-3.125rem, 6.25rem); } 
@@ -328,7 +333,7 @@ background-color: rgba(30, 32, 35, 0.143);
   }
 
   &__photo {
-    width: 20%;
+    width: 30%;
     padding-right: 1.25rem; 
 
     &-img {
@@ -409,7 +414,7 @@ background-color: rgba(30, 32, 35, 0.143);
     }
       
       &-text {
-        font-size: calc(1vw + 10px);
+        font-size: calc(1vw + 14px);
         color: $font-color;
         line-height: 1.5em;
       }
