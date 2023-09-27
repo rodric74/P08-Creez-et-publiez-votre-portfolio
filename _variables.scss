@@ -1,11 +1,15 @@
 $primary-color: #1e2023;
 $background-color: #1e1c1d;
 $font-color: #ffffff;
-$font-custom:#BD871F;
+$font-custom: #bd871f;
 $font-color-active: #000000;
-$font--primary:'Dosis', sans-serif;
+$font--primary: "Dosis", sans-serif;
 $transition-length: 0.8s;
 $box-shadow: 0px 0px 11px 11px #252324b5;
 $menu-items-count: 4;
-$headerColor: #BD871F;
+$headerColor: #bd871f;
 $size: 30px;
+$width: 100vw;
+$height: 100vh;
+$font-size-calc: calc(2vw + 0.625rem);
+$transition-easing: cubic-bezier(0.77, 0, 0.175, 1);
