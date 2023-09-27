@@ -72,10 +72,10 @@ document.querySelectorAll(".work__project-text").forEach((paragraph, index) => {
     readMoreSpan.addEventListener("click", () => {
       if (paragraph.textContent === shortText) {
         paragraph.textContent = paragraph.getAttribute("data-fulltext");
-        readMoreSpan.textContent = "Show less...";
+        readMoreSpan.textContent = "Read less...";
       } else {
         paragraph.textContent = shortText;
-        readMoreSpan.textContent = "Show more...";
+        readMoreSpan.textContent = "Read more...";
       }
     });
   } else {
